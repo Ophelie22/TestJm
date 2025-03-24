@@ -53,7 +53,7 @@ readonly class FreelanceSearchService{
 
             try {
                 $this->elasticsearchClient->index([
-                    'index' => 'freelances',
+                    'index' => 'freelance',
                     'id' => $freelance->getId(),
                     'body' => $document
                 ]);

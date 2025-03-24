@@ -41,6 +41,7 @@ readonly class InsertFreelanceLinkedIn
         $freelanceLinkedIn->setFirstName($dto->firstName);
         $freelanceLinkedIn->setLastName($dto->lastName);
         $freelanceLinkedIn->setJobTitle($dto->jobTitle);
+        dd($dto);
         $linkedInUrl= new LinkedInProfileUrl($dto->url);
         $freelanceLinkedIn->setUrl($linkedInUrl);
         $freelanceLinkedIn->setUpdatedAt(new \DateTime());
