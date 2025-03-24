@@ -28,6 +28,7 @@ class FreelanceConso
     private ?string $jobTitle = null;
 
     #[ORM\OneToOne(inversedBy: 'freelanceConso', cascade: ['persist', 'remove'])]
+    #[Groups(['freelance_detail_excluded'])] // AJOUT pour casser la boucle
     private ?Freelance $freelance = null;
 
     #[ORM\Column(length: 255, nullable: true)]

@@ -30,14 +30,14 @@ class Freelance
      * @var Collection<int, FreelanceLinkedIn>
      */
     #[ORM\OneToMany(targetEntity: FreelanceLinkedIn::class, mappedBy: 'freelance')]
-    #[Groups(['freelance_detail'])]
+    #[Groups(['freelance_detail_excluded'])] 
     private Collection $freelanceLinkedIns;
 
     /**
      * @var Collection<int, FreelanceJeanPaul>
      */
     #[ORM\OneToMany(targetEntity: FreelanceJeanPaul::class, mappedBy: 'freelance')]
-    #[Groups(['freelance_detail'])]
+    #[Groups(['freelance_detail_excluded'])] 
     private Collection $freelanceJeanPauls;
 
     #[ORM\OneToOne(mappedBy: 'freelance', cascade: ['persist', 'remove'])]

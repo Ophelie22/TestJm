@@ -30,11 +30,13 @@ class ScrapLinkedInCommand extends Command
 
         $jsonData = file_get_contents('./datas/linkedin.json');
 
-        $linkedInDtos = $this->serializer->deserialize($jsonData, FreelanceJeanPaulDto::class . '[]', 'json');
+        $linkedInDtos = $this->serializer->deserialize($jsonData, FreelanceLinkedInDto::class . '[]', 'json');
 
         /** @var FreelanceLinkedInDto $linkedInDto */
         foreach ($linkedInDtos as $linkedInDto) {
             $io->writeln("Dispatching message for $linkedInDto->url");
+            $io->writeln("Nombre d'entrées LinkedIn : " . count($linkedInDtos));
+
             $this->bus->dispatch(new InsertFreelanceLinkedInMessage($linkedInDto));
         }
 

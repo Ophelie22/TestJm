@@ -24,7 +24,11 @@ final readonly class InsertFreelanceLinkedInMessageHandler
         $lock = $this->lockFactory->createLock('insert_freelance');
 
         $lock->acquire(true);
+        try {
         $this->insertFreelanceLinkedIn->insertFreelanceLinkedIn($message->dto);
         $this->entityManager->flush();
+    } finally {
+        $lock->release();
     }
+}
 }

@@ -42,7 +42,7 @@ readonly class InsertFreelanceLinkedIn
         $freelanceLinkedIn->setLastName($dto->lastName);
         $freelanceLinkedIn->setJobTitle($dto->jobTitle);
         $linkedInUrl= new LinkedInProfileUrl($dto->url);
-        //$freelanceLinkedIn->setUrl($linkedInUrl);
+        $freelanceLinkedIn->setUrl($linkedInUrl);
         $freelanceLinkedIn->setUpdatedAt(new \DateTime());
         $this->entityManager->persist($freelanceLinkedIn);  // Persiste FreelanceLinkedIn
 
