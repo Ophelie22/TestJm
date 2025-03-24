@@ -21,12 +21,16 @@ final readonly class InsertFreelanceJeanPaulMessageHandler
     public function __invoke(InsertFreelanceJeanPaulMessage $message): void
     {
         //die('debug');
-        dump('handler appelé avec :');
-        dump($message->dto);
+        //dump('handler appelé avec :');
+        //dump($message->dto);
         $lock = $this->lockFactory->createLock('insert_freelance');
 
         $lock->acquire(true);
+        try {
         $this->insertFreelanceJeanPaul->insertFreelanceJeanPaul($message->dto);
         $this->entityManager->flush();
+    }   finally {
+        $lock->release();
     }
+}
 }

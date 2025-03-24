@@ -12,6 +12,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
+//php bin/console app:freelance:detail 123 --env=test
 #[AsCommand(
     name: 'app:freelance:detail',
     description: 'Get freelance as Json',

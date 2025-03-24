@@ -130,7 +130,7 @@
   {"firstName": "Julien", "lastName": "Roux", "jobTitle": "Data Scientist", "url": "https://www.linkedin.com/in/julien-roux"},
   {"firstName": "Camille", "lastName": "Vincent", "jobTitle": "Ingénieur DevOps", "url": "https://www.linkedin.com/in/camille-vincent"},
   {"firstName": "Thomas", "lastName": "Fournier", "jobTitle": "Consultant IT", "url": "https://www.linkedin.com/in/thomas-fournier"},
-  {"firstName": "Nicolas", "lastName": "Morel", "url": "https://www.linkedin.com/in/nicolas-morel"},
+  {"firstName": "Nicolas", "lastName": "Morel","jobTitle":"Développeur backend","url": "https://www.linkedin.com/in/nicolas-morel"},
   {"firstName": "Antoine", "lastName": "Girard", "jobTitle": "Analyste programmeur", "url": "https://www.linkedin.com/in/antoine-girard"},
   {"firstName": "Claire", "lastName": "André", "jobTitle": "Chef de projet IT", "url": "https://www.linkedin.com/in/claire-andre"},
   {"firstName": "Chloé", "lastName": "Mercier", "jobTitle": "Développeur mobile", "url": "https://www.linkedin.com/in/chloe-mercier"},

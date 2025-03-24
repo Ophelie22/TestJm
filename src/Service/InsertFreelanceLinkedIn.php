@@ -28,7 +28,6 @@ readonly class InsertFreelanceLinkedIn
             $freelanceLinkedIn->setUpdatedAt($currentDate);
 
             $this->entityManager->persist($freelanceLinkedIn);
- 
         }
 
         if (!$freelanceLinkedIn->getFreelance()) {
@@ -41,7 +40,7 @@ readonly class InsertFreelanceLinkedIn
         $freelanceLinkedIn->setFirstName($dto->firstName);
         $freelanceLinkedIn->setLastName($dto->lastName);
         $freelanceLinkedIn->setJobTitle($dto->jobTitle);
-        dd($dto);
+        //dd($dto);
         $linkedInUrl= new LinkedInProfileUrl($dto->url);
         $freelanceLinkedIn->setUrl($linkedInUrl);
         $freelanceLinkedIn->setUpdatedAt(new \DateTime());

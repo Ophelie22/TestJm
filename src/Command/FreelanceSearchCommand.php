@@ -10,7 +10,8 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-//php bin/console app:freelance:search --name=Jean
+// php bin/console app:freelance:search "Jean" --env=test
+
 
 #[AsCommand(
     name: 'app:freelance:search',

@@ -114,6 +114,7 @@ class TechnicalTest extends KernelTestCase
         $freelanceSearchService = static::getContainer()->get(FreelanceSearchService::class);
 
         $freelances = $freelanceSearchService->searchFreelance('*');
+        var_dump($freelances); 
         $this->assertNotEmpty($freelances, 'No freelances found');
     }
 
