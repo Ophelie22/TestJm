@@ -1,26 +1,26 @@
 # Read the documentation: https://github.com/FriendsOfSymfony/FOSElasticaBundle/blob/master/doc/setup.md
 fos_elastica:
-    clients:
-        default:
-            url: "%env(ELASTICSEARCH_URL)%/"
-    indexes:
-        freelance:
-            properties:
-            firstName:
+  clients:
+    default:
+      url: "%env(ELASTICSEARCH_URL)%/"
+  indexes:
+    freelance:
+      properties:
+          firstName:
+              type: text
+              analyzer: standard
+          lastName:
                 type: text
                 analyzer: standard
-            lastName:
+          jobTitle:
                 type: text
                 analyzer: standard
-            jobTitle:
-                type: text
-                analyzer: standard
-            linkedinUrl:
+          linkedinUrl:
                 type: keyword
-            fullName:
+          fullName:
                 type: text
                 analyzer: standard
-        persistence:
+      persistence:
             driver: orm
             model: App\Entity\FreelanceConso
             provider: ~

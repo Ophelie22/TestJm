@@ -19,7 +19,7 @@ class LinkedInProfileUrl
         try {
             $baseUrl = 'linkedin.com/in/';
             $linkedInCom = strpos($rawUrl, $baseUrl);
-          
+        
             if ($linkedInCom === false || str_ends_with($rawUrl, ":")) {
                 throw new \Exception("No linkedin.com/in/ pattern found");
             }

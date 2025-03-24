@@ -17,20 +17,7 @@ class FreelanceRepository extends ServiceEntityRepository
         parent::__construct($registry, Freelance::class);
     }
 
-//    /**
-//     * @return Freelance[] Returns an array of Freelance objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('f')
-//            ->andWhere('f.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('f.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+
 
     #[ArrayShape(['firstName' => "string", 'quantity' => "int"])]
     public function findTheMostUseFirstname(): ?array
