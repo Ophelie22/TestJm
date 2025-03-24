@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\Attribute\Autowire;
 readonly class FreelanceSearchService
 {
     public function __construct(
-        #[Autowire(service: "fos_elastica.finder.freelance")]
+      //  #[Autowire(service: "fos_elastica.finder.freelance")]
         private PaginatedFinderInterface $freelanceFinder,
     )
     {
