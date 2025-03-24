@@ -2,9 +2,8 @@
 
 namespace App\MessageHandler;
 
-use App\Message\InsertFreelanceJeanPaulMessage;
+
 use App\Message\InsertFreelanceLinkedInMessage;
-use App\Service\InsertFreelanceJeanPaul;
 use App\Service\InsertFreelanceLinkedIn;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Lock\LockFactory;
