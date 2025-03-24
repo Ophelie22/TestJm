@@ -175,8 +175,8 @@ php bin/phpunit --filter TechnicalTest::testImportJeanPaul
 php bin/phpunit --filter TechnicalTest::testNormalizeFreelance
 php bin/phpunit --filter testElasticSearchBasicSearch --testdox
 php bin/phpunit --filter testElasticSearchBasicSearchWithSerializer
-
 php bin/phpunit --filter testConnector
+php bin/phpunit --filter testFindFirstName
 ```
 
 # Installation du kernel Symfony
