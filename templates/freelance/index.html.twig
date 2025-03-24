@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - Freelances{% endblock %}
+
+{% block body %}
+    <div style="text-align: center; padding-top: 50px">
+        <h1>🔎 Recherche de freelances</h1>
+
+        <form action="{{ path('freelances_search') }}" method="get">
+            <input type="text" name="query" placeholder="Tape un mot-clé (ex: Symfony)" minlength="3" required>
+            <button type="submit">Rechercher</button>
+        </form>
+    </div>
+{% endblock %}

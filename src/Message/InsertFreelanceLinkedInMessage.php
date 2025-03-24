@@ -6,8 +6,8 @@ use App\Dto\FreelanceLinkedInDto;
 
 final class InsertFreelanceLinkedInMessage
 {
-     public function __construct(
-         public FreelanceLinkedInDto $dto
-     ) {
-     }
+    public function __construct(
+        public FreelanceLinkedInDto $dto
+    ) {
+    }
 }

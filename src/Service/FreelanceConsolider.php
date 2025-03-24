@@ -31,6 +31,8 @@ readonly class FreelanceConsolider
         $freelanceConso->setLinkedInUrl($this->getLinkedInUrl($freelance));
         $freelanceConso->setJobTitle($this->getJobTitle($freelance));
 
+        $this->entityManager->flush();
+
         return $freelanceConso;
     }
 
@@ -82,11 +84,12 @@ readonly class FreelanceConsolider
         return null;
     }
 
-    private function getLinkedInUrl(Freelance $freelance): ?LinkedInProfileUrl
+    private function getLinkedInUrl(Freelance $freelance): ?string
     {
         foreach ($freelance->getFreelanceLinkedIns() as $freelanceLinkedIn) {
+            //dump($freelanceLinkedIn->getUrl()); //
             if ($freelanceLinkedIn->getUrl()) {
-                return new LinkedInProfileUrl($freelanceLinkedIn->getUrl());
+                return (string)($freelanceLinkedIn->getUrl());
             }
         }
 
