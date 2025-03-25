@@ -50,3 +50,23 @@ class FreelanceApiController extends AbstractController
         ]);
     }
 }
+
+
+
+
+///si jamais je veux ajouter des routes pour l'api, je peux le faire ici:http://localhost:8000/api/freelances/stat
+
+    //GET /api/freelances/most-used-firstname : pour retourner le prénom le plus utilisé avec son nombre d’occurrences.
+    //    #[Route('/most-used-firstname', name: 'firstname_stat', methods: ['GET'])]
+      //  public function getMostUsedFirstName(): JsonResponse
+        //{
+          //  $data = $this->freelanceManager->findTheMostUsedFirstName();
+//
+    //      error_log('Controller Debug: ' . print_r($data, true));
+
+  //          return $this->json([
+  //        'most_used_firstname' => $data['firstname'] ?? null,
+    //            'count' => $data['count'] ?? 0
+        //    ]);
+      //  }
+//}

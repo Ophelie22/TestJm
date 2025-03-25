@@ -16,28 +16,13 @@ class FreelanceConsoRepository extends ServiceEntityRepository
         parent::__construct($registry, FreelanceConso::class);
     }
 
-    //    /**
-    //     * @return FreelanceConso[] Returns an array of FreelanceConso objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('f')
-    //            ->andWhere('f.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('f.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
 
-    //    public function findOneBySomeField($value): ?FreelanceConso
-    //    {
-    //        return $this->createQueryBuilder('f')
-    //            ->andWhere('f.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
-}
+        public function findAll(): array
+        {
+            $result = $this->createQueryBuilder('f')
+                ->getQuery()
+                ->getResult();
+            return $result;
+        }
+        
+    }

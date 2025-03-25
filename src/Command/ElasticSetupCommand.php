@@ -22,7 +22,7 @@ class ElasticSetupCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->client->index([
-            'index' => 'freelances',
+            'index' => 'freelance',
             'body' => [
                 'firstName' => 'Jean',
                 'lastName' => 'Paul',

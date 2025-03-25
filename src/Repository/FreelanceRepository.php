@@ -30,6 +30,21 @@ class FreelanceRepository extends ServiceEntityRepository
             ->setMaxResults(1)
             ->getQuery()
             ->getOneOrNullResult();
-    }
-}
+            //dd($result);
 
+
+        //error_log('Repository Debug: ' . print_r($result, true));
+        
+       // if ($result !== null && isset($result['firstName']) && isset($result['count'])) {
+         //   return [
+           //     'firstName' => $result['firstName'],
+             //   'count' => (int)$result['count'],
+            //];
+        //}
+        //return [
+          //  'firstName' => 'Unknown',
+            //'count' => 0,
+        //];
+    }
+
+}   

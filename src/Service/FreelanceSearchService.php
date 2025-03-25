@@ -70,11 +70,11 @@ readonly class FreelanceSearchService{
         try {
             // Vérifier si Elasticsearch est accessible
             //dd($this->elasticsearchClient->cluster()->health());
-            $health = $this->elasticsearchClient->cluster()->health();
-            dd([
-            'health' => $health,
-            'host' => ('elasticsearch:9200')
-            ]);
+            //$health = $this->elasticsearchClient->cluster()->health();
+            //dd([
+            //'health' => $health,
+            //'host' => ('elasticsearch:9200')
+            //]);
             $params = [
                 'index' => 'freelance',
                 'body' => [

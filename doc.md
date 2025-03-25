@@ -177,11 +177,19 @@ php bin/phpunit --filter testElasticSearchBasicSearch --testdox
 php bin/phpunit --filter testElasticSearchBasicSearchWithSerializer
 php bin/phpunit --filter testConnector
 php bin/phpunit --filter testFindFirstName
+php bin/phpunit
 ```
 
 # Installation du kernel Symfony
 
 ```bash
 composer require symfony/http-kernel
+
+
 ```
 
+## Commande Elastic
+#
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' jmtest-elasticsearch-1
+curl -X GET "http://172.18.0.3:9200/_cluster/health"
+curl -X GET "http://jmtest-elasticsearch-1:9200/_cat/indices?v"
