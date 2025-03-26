@@ -16,6 +16,8 @@ readonly class FreelanceSearchService{
         private PaginatedFinderInterface $freelanceFinder,
         private LoggerInterface $logger
     ) {
+        $this->freelanceFinder = $freelanceFinder;
+        $this->logger = $logger;
         $this->elasticsearchClient = ClientBuilder::create()
             ->setHosts(['elasticsearch:9200'])
             ->setRetries(2)
@@ -44,8 +46,8 @@ readonly class FreelanceSearchService{
                 'jobTitle' => $freelanceConso->getJobTitle(),
                 'fullName' => $freelanceConso->getFullName(),
                 'linkedInUrl' => $freelanceConso->getLinkedInUrl(),
-                //'createdAt' => $freelance->getCreatedAt() ? $freelance->getCreatedAt()->format('Y-m-d H:i:s') : null,
-               // 'updatedAt' => $freelance->getUpdatedAt() ? $freelance->getUpdatedAt()->format('Y-m-d H:i:s') : null
+                #'createdAt' => $freelance->getCreatedAt() ? $freelance->getCreatedAt()->format('Y-m-d H:i:s') : null,
+                #'updatedAt' => $freelance->getUpdatedAt() ? $freelance->getUpdatedAt()->format('Y-m-d H:i:s') : null
 
             ];
             // Log des données à indexer
