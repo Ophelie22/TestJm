@@ -44,8 +44,8 @@ readonly class FreelanceSearchService{
                 'jobTitle' => $freelanceConso->getJobTitle(),
                 'fullName' => $freelanceConso->getFullName(),
                 'linkedInUrl' => $freelanceConso->getLinkedInUrl(),
-                'createdAt' => $freelance->getCreatedAt() ? $freelance->getCreatedAt()->format('Y-m-d H:i:s') : null,
-                'updatedAt' => $freelance->getUpdatedAt() ? $freelance->getUpdatedAt()->format('Y-m-d H:i:s') : null
+                //'createdAt' => $freelance->getCreatedAt() ? $freelance->getCreatedAt()->format('Y-m-d H:i:s') : null,
+               // 'updatedAt' => $freelance->getUpdatedAt() ? $freelance->getUpdatedAt()->format('Y-m-d H:i:s') : null
 
             ];
             // Log des données à indexer
