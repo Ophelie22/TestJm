@@ -9,7 +9,8 @@ composer require friendsofsymfony/elastica-bundle
 # Lancement du projet
 
 ```bash
-docker-compose up
+docker-
+ up
 ```
 
 # Pour lancer les messages

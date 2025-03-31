@@ -16,8 +16,8 @@ readonly class FreelanceSearchService{
         private PaginatedFinderInterface $freelanceFinder,
         private LoggerInterface $logger
     ) {
-        $this->freelanceFinder = $freelanceFinder;
-        $this->logger = $logger;
+        //$this->freelanceFinder = $freelanceFinder;
+        //$this->logger = $logger;
         $this->elasticsearchClient = ClientBuilder::create()
             ->setHosts(['elasticsearch:9200'])
             ->setRetries(2)

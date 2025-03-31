@@ -24,9 +24,9 @@ services:
 
         
             
-    FOS\ElasticaBundle\Finder\PaginatedFinderInterface: 
-        alias: fos_elastica.finder.freelance
-        public: true
+    #FOS\ElasticaBundle\Finder\PaginatedFinderInterface: 
+    #   alias: fos_elastica.finder.freelance
+     #   public: true
 
             
             # makes classes in src/ available to be used as services
